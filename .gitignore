@@ -1,0 +1,45 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.toast
+.lucid
+.sigh
+.pytest_cache/
+.coverage
+htmlcov/
+.log
+*.log
+
+# Databases & local state
+*.db
+logflow.db
+celerybeat-schedule
+celerybeat-schedule.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+
+# Editor configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

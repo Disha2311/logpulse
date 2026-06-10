@@ -1,0 +1,33 @@
+name: Python pytest CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      # If we wanted live integration tests, we could spin up redis/postgres services here.
+      # Since we mock Redis and use SQLite in-memory for our test suite, we do not need live services.
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run pytest test suite
+      run: |
+        python -m pytest -v
